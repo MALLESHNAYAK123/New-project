@@ -8,95 +8,113 @@ resource "aws_vpc" "vpc-1" {
 }
 
 resource "aws_subnet" "public-subnet-1" {
-  vpc_id     = aws_vpc.vpc-1.id
-  cidr_block = "10.0.0.0/28"
+  vpc_id                  = aws_vpc.vpc-1.id
+  cidr_block              = "10.0.0.0/28"
+  map_public_ip_on_launch = true
+  availability_zone       = "us-east-1a"
   tags = {
     Name = "mallesh-pub-subnet-1"
   }
 }
 
 resource "aws_subnet" "public-subnet-2" {
-  vpc_id     = aws_vpc.vpc-1.id
-  cidr_block = "10.0.0.16/28"
+  vpc_id                  = aws_vpc.vpc-1.id
+  cidr_block              = "10.0.0.16/28"
+  map_public_ip_on_launch = true
+  availability_zone       = "us-east-1b"
   tags = {
     Name = "mallesh-pub-subnet-2"
   }
 }
 resource "aws_subnet" "public-subnet-3" {
-  vpc_id     = aws_vpc.vpc-1.id
-  cidr_block = "10.0.0.32/28"
+  vpc_id                  = aws_vpc.vpc-1.id
+  cidr_block              = "10.0.0.32/28"
+  map_public_ip_on_launch = true
+  availability_zone       = "us-east-1c"
   tags = {
     Name = "mallesh-pub-subnet-3"
   }
 
 }
 resource "aws_subnet" "public-subnet-4" {
-  vpc_id     = aws_vpc.vpc-1.id
-  cidr_block = "10.0.0.48/28"
+  vpc_id                  = aws_vpc.vpc-1.id
+  cidr_block              = "10.0.0.48/28"
+  map_public_ip_on_launch = true
+  availability_zone       = "us-east-1d"
   tags = {
     Name = "mallesh-pub-subnet-4"
   }
 
 }
 resource "aws_subnet" "public-subnet-5" {
-  vpc_id     = aws_vpc.vpc-1.id
-  cidr_block = "10.0.0.64/28"
+  vpc_id                  = aws_vpc.vpc-1.id
+  cidr_block              = "10.0.0.64/28"
+  map_public_ip_on_launch = true
+  availability_zone       = "us-east-1e"
   tags = {
     Name = "mallesh-pub-subnet-5"
   }
 
 }
 resource "aws_subnet" "public-subnet-6" {
-  vpc_id     = aws_vpc.vpc-1.id
-  cidr_block = "10.0.0.80/28"
+  vpc_id                  = aws_vpc.vpc-1.id
+  cidr_block              = "10.0.0.80/28"
+  map_public_ip_on_launch = true
+  availability_zone       = "us-east-1f"
   tags = {
     Name = "mallesh-pub-subnet-6"
   }
 
 }
 resource "aws_subnet" "private-subnet-1" {
-  vpc_id     = aws_vpc.vpc-1.id
-  cidr_block = "10.0.0.96/28"
+  vpc_id            = aws_vpc.vpc-1.id
+  cidr_block        = "10.0.0.96/28"
+  availability_zone = "us-east-1a"
   tags = {
     Name = "mallesh-pvt-subnet-1"
   }
 
 }
 resource "aws_subnet" "private-subnet-2" {
-  vpc_id     = aws_vpc.vpc-1.id
-  cidr_block = "10.0.0.112/28"
+  vpc_id            = aws_vpc.vpc-1.id
+  cidr_block        = "10.0.0.112/28"
+  availability_zone = "us-east-1b"
   tags = {
     Name = "mallesh-pvt-subnet-2"
   }
 
 }
 resource "aws_subnet" "private-subnet-3" {
-  vpc_id     = aws_vpc.vpc-1.id
-  cidr_block = "10.0.0.128/28"
+  vpc_id            = aws_vpc.vpc-1.id
+  cidr_block        = "10.0.0.128/28"
+  availability_zone = "us-east-1c"
   tags = {
     Name = "mallesh-pvt-subnet-3"
   }
 
 }
 resource "aws_subnet" "private-subnet-4" {
-  vpc_id     = aws_vpc.vpc-1.id
-  cidr_block = "10.0.0.144/28"
+  vpc_id            = aws_vpc.vpc-1.id
+  cidr_block        = "10.0.0.144/28"
+  availability_zone = "us-east-1d"
   tags = {
     Name = "mallesh-pvt-subnet-4"
   }
 
 }
 resource "aws_subnet" "private-subnet-5" {
-  vpc_id     = aws_vpc.vpc-1.id
-  cidr_block = "10.0.0.160/28"
+  vpc_id            = aws_vpc.vpc-1.id
+  cidr_block        = "10.0.0.160/28"
+  availability_zone = "us-east-1e"
   tags = {
     Name = "mallesh-pvt-subnet-5"
   }
 
 }
 resource "aws_subnet" "private-subnet-6" {
-  vpc_id     = aws_vpc.vpc-1.id
-  cidr_block = "10.0.0.176/28"
+  vpc_id            = aws_vpc.vpc-1.id
+  cidr_block        = "10.0.0.176/28"
+  availability_zone = "us-east-1f"
   tags = {
     Name = "mallesh-pvt-subnet-6"
   }
