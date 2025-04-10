@@ -24,3 +24,4 @@ terraform.rc
 
 provider.tf
 .terraform.lock.hcl
+.terraform.*
